@@ -1,0 +1,77 @@
+// Place all the styles related to the Home controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+#main {
+  height: 100vh;
+  background-color: bisque;
+  overflow: auto;
+
+  h2 {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  >div {
+    height: 90vh;
+    background-color: black;
+    width: 80%;
+    margin: auto;
+    border-radius: 5px;
+    overflow: auto;
+    position: relative;
+
+    div#messages {
+      height: 90%;
+      width: 95%;
+      color: white;
+      margin: 14px auto;
+      overflow: auto;
+      display: flex;
+      flex-direction: column;
+
+      p {
+        display: inline-block;
+        padding: 10px;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        margin-bottom: 5px;
+        margin-top: 5px;
+        max-width: 70%;
+        width: max-content;
+
+        &.received {
+          background-color: chocolate;
+          border-bottom-right-radius: 10px;
+        }
+        
+        &.sent {
+          border-bottom-left-radius: 10px;
+          background-color: darkred;
+          align-self: flex-end;
+        }
+      }
+    }
+
+    div#send_message {
+      width: 95%;
+      margin: auto;
+
+      input {
+        height: 30px;
+        width: 90%;
+        border-radius: 10px;
+        border: 0;
+      }
+
+      button {
+        height: 35px;
+        width: 8.8%;
+        border-radius: 20px;
+        border: 0;
+        background-color: tomato;
+        color: white;
+      }
+    }
+  }
+}
