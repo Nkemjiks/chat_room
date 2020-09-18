@@ -12,7 +12,7 @@
     margin-bottom: 20px;
   }
 
-  >div {
+  >div#chat_body {
     height: 90vh;
     background-color: black;
     width: 80%;
@@ -50,10 +50,21 @@
           background-color: darkred;
           align-self: flex-end;
         }
+
+        &.announce {
+          align-self: center;
+          font-style: italic;
+          color: cyan;
+
+          em {
+            font-weight: 700;
+            color: mediumorchid;
+          }
+        }
       }
     }
 
-    div#send_message {
+    form#send_message {
       width: 95%;
       margin: auto;
 
@@ -71,6 +82,44 @@
         border: 0;
         background-color: tomato;
         color: white;
+      }
+    }
+
+  }
+  div#modal {
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    background-color: #000000bf;
+    width: 100%;
+    z-index: 2;
+    display: flex;
+    display: none;
+
+    >div {
+      width: 300px;
+      background: white;
+      margin: auto;
+      padding: 30px;
+      text-align: center;
+      height: 150px;
+      border-radius: 10px;
+
+      input {
+        height: 30px;
+        border-radius: 10px;
+        border: 2px dotted rebeccapurple;
+        width: 100%;
+        margin-bottom: 10px;
+      }
+
+      button {
+        height: 35px;
+        border-radius: 20px;
+        border: 0;
+        background-color: #673AB7;
+        color: white;
+        width: 80px;
       }
     }
   }
